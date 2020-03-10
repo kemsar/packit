@@ -1,7 +1,7 @@
 {
-  "name": "lighterpack",
+  "name": "packit",
   "version": "2.0.0",
-  "description": "LighterPack =========== LighterPack is a website to track the gear you take on adventures. It is still in Beta.",
+  "description": "Pack Trip Planner (PTP) helps organize and track your pack trips",
   "main": "app.js",
   "scripts": {
     "dev": "node app.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/galenmaly/lighterpack"
+    "url": "https://github.com/kevinsarsen/packit"
   },
   "author": "",
   "license": "GPL-2.0",

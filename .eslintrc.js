@@ -23,8 +23,19 @@ module.exports = {
         "no-shadow": "off", // TODO
         "no-param-reassign": "off", // TODO
         "no-plusplus": "off", // TODO
-        "prefer-destructuring": "off", // TODO
+        "prefer-destructuring": "off", // TODO,
         "vue/html-indent": ["error", 4], // Stylistic preference
         "vue/max-attributes-per-line": "off", // Investigate
+        "no-underscore-dangle": "off",
+        "eqeqeq": "off",
+        "no-var": "off",
+        "radix": "off",
+        "guard-for-in": "off",
+        "vars-on-top": "off",
+        "no-restricted-syntax": "off",
+        "block-scoped-var": "off",
+        "no-redeclare": "off",
+        "no-unused-vars": "off",
+        "consistent-return": "off",
     }
 };

@@ -52,6 +52,7 @@ const Category = function ({ library, id, _isNew }) {
     this.subtotalConsumablePrice = 0;
     this.subtotalQty = 0;
 
+    // eslint-disable-next-line no-underscore-dangle
     this._isNew = _isNew;
     return this;
 };
@@ -436,7 +437,7 @@ Library.prototype.removeList = function (id) {
 
     if (this.defaultListId == id) {
         let newId = -1;
-        for (var i in lists) {
+        for (var i in this.lists) {
             newId = i;
             break;
         }
@@ -461,7 +462,6 @@ Library.prototype.copyList = function (id) {
             copiedCategory.addItem(oldCategory.categoryItems[j]);
         }
     }
-
     return copiedList;
 };
 
@@ -499,7 +499,7 @@ Library.prototype.getItemsInCurrentList = function () {
 Library.prototype.findCategoryWithItemById = function (itemId, listId) {
     if (listId) {
         const list = this.getListById(listId);
-        for (i in list.categoryIds) {
+        for (var i in list.categoryIds) {
             var category = this.getCategoryById(list.categoryIds[i]);
             if (category) {
                 for (var j in category.categoryItems) {
@@ -702,7 +702,7 @@ Library.prototype.fixDuplicateIds = function (serializedLibrary) {
         foundIds[list.id].push({ type: 'list', list });
     });
 
-    for (id in foundIds) {
+    for (var id in foundIds) {
         if (foundIds[id].length > 1) {
             const duplicateSet = foundIds[id];
             duplicateSet.forEach((duplicate, index) => {
@@ -756,6 +756,7 @@ Object.size = function (obj) {
     let size = 0; let
         key;
     for (key in obj) {
+        // eslint-disable-next-line no-prototype-builtins
         if (obj.hasOwnProperty(key)) size++;
     }
     return size;

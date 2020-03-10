@@ -133,7 +133,7 @@ router.post('/saveLibrary', (req, res) => {
 
 function saveLibrary(req, res, user) {
     if (typeof req.body.syncToken === 'undefined') {
-        return res.status(400).send("Please refresh this page to upgrade to the latest version of LighterPack.");
+        return res.status(400).send("Please refresh this page to upgrade to the latest version of PackIt.");
     }
     if (!req.body.username || !req.body.data) {
         return res.status(400).json({ message: 'An error occurred while saving your data. Please refresh your browser and try again.' });
@@ -220,10 +220,10 @@ router.post('/forgotPassword', (req, res) => {
                     const message = `Hello ${username},\n Apparently you forgot your password. Here's your new one: \n\n Username: ${username}\n Password: ${newPassword}\n\n If you continue to have problems, please reply to this email with details.\n\n Thanks!`;
 
                     const mailOptions = {
-                        from: 'LighterPack <info@mg.lighterpack.com>',
+                        from: 'PackIt <info@mg.packit.com>',
                         to: email,
-                        "h:Reply-To": "LighterPack <info@lighterpack.com>",
-                        subject: 'Your new LighterPack password',
+                        "h:Reply-To": "PackIt <info@packit.com>",
+                        subject: 'Your new PackIt password',
                         text: message,
                     };
 
@@ -267,10 +267,10 @@ router.post('/forgotUsername', (req, res) => {
         const message = `Hello ${username},\n Apparently you forgot your username. Here It is: \n\n Username: ${username}\n\n If you continue to have problems, please reply to this email with details.\n\n Thanks!`;
 
         const mailOptions = {
-            from: 'LighterPack <info@mg.lighterpack.com>',
+            from: 'PackIt <info@mg.packit.com>',
             to: email,
-            "h:Reply-To": "LighterPack <info@lighterpack.com>",
-            subject: 'Your LighterPack username',
+            "h:Reply-To": "PackIt <info@packit.com>",
+            subject: 'Your PackIt username',
             text: message,
         };
 
@@ -308,7 +308,7 @@ function account(req, res, user) {
                 if (errors.length) {
                     return res.status(400).json({ errors });
                 }
-                
+
                 bcrypt.genSalt(10, (err, salt) => {
                     bcrypt.hash(newPassword, salt, (err, hash) => {
                         user.password = hash;

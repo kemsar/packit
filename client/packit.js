@@ -31,17 +31,17 @@ bus.$on('unauthorized', (error) => {
 
 store.dispatch('init')
     .then(() => {
-        initLighterPack();
+        initPackIt();
     })
     .catch((error) => {
         if (!store.state.library) {
             router.push('/welcome');
         }
-        initLighterPack();
+        initPackIt();
     });
 
-var initLighterPack = function () {
-    window.LighterPack = new Vue({
+var initPackIt = function () {
+    window.PackIt = new Vue({
         router,
         store,
         data: {

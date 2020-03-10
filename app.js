@@ -30,13 +30,9 @@ app.use('/', views);
 console.log('-------');
 console.log(new Date().toString().substr(0, 24));
 
-if (config.get('environment') === 'production') {
-    webpackConfig = require('./webpack.config');
-} else {
-    webpackConfig = require('./webpack.development.config');
-}
+const webpackConfig = config.get('environment') === 'production' ? require('./webpack.config') : require('./webpack.development.config');
 
-webpackCompiler = webpack(webpackConfig);
+const webpackCompiler = webpack(webpackConfig);
 
 // Default port is 3000; we can have multiple bindings
 config.get('bindings').map(

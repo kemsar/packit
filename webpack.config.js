@@ -7,8 +7,8 @@ module.exports = {
     entry: {
         app: [
             'whatwg-fetch',
-            './client/css/lighterpack.scss',
-            './client/lighterpack.js',
+            './client/css/packit.scss',
+            './client/packit.js',
         ],
         share: [
             './public/js/pies.js',

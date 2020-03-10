@@ -6,12 +6,12 @@
     <div id="lpWelcomeFooter">
         <div class="lpSiteBy">
             Site by <a class="lpHref" href="https://www.galenmaly.com/" target="_blank" rel="noopener noreferrer">Galen Maly</a>
-            and <a class="lpHref" href="https://github.com/galenmaly/lighterpack/graphs/contributors" target="_blank" rel="noopener noreferrer">friends</a>.
+            and <a class="lpHref" href="https://github.com/galenmaly/packit/graphs/contributors" target="_blank" rel="noopener noreferrer">friends</a>.
         </div>
         <div class="lpContact">
-            <a class="lpHref" href="https://github.com/galenmaly/lighterpack" target="_blank" rel="noopener noreferrer">Copyleft</a> LighterPack 2019
+            <a class="lpHref" href="https://github.com/galenmaly/packit" target="_blank" rel="noopener noreferrer">Copyleft</a> PackIt 2019
             -
-            <a class="lpHref" href="mailto:info@lighterpack.com">Contact</a>
+            <a class="lpHref" href="mailto:info@packit.com">Contact</a>
         </div>
     </div>
 </template>

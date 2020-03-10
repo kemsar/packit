@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER Nodar Nutsubidze <nodar.nutsubidze@gmail.com>
-ENV HOSTNAME lighterpack
+ENV HOSTNAME packit
 
 # Install packages
 RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -qy \
@@ -11,13 +11,13 @@ RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -qy \
   python-pip
 
 # Download git repo
-RUN git clone https://github.com/galenmaly/lighterpack.git /var/www/lighterpack
+RUN git clone https://github.com/galenmaly/packit.git /var/www/packit
 
 # Move to the directory so we install the libraries in correct folder
-RUN cd /var/www/lighterpack && npm install
+RUN cd /var/www/packit && npm install
 
 # Web
 EXPOSE 3000
 
-WORKDIR /var/www/lighterpack
+WORKDIR /var/www/packit
 CMD ["nodejs", "app.js"]
